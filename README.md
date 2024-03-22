@@ -1,114 +1,76 @@
-## cancer 
-#### 목적: 양성 종양과 악성 종양을 구분하는 머신러닝
+## cancer AI
+#### 목적: 양성 종양과 악성 종양을 구분을 위한 인공지능
 #### 분석툴: sklearn, tensorflow
-#### 결론
+#### 결론: 머신러닝 혹은 딥러닝 모델을 통해 종양이 양성인지 음성인지 판별할 수 있을 것임.
 
-해당 데이터는 종양이 악성 종양인지 양성 종양인지에 대한 정보, radius와 texture, perimeter, area 등에 대한 정보가 평균, se, worst로 분류되어 있음. 
+해당 데이터는 종양이 악성 종양인지 양성 종양인지에 대한 정보, radius와 texture, perimeter, area 등에 대한 정보가 mean, se, worst로 분류되어 있음. 
 ![image](https://github.com/alwls5773/side_project_3/assets/66359601/33a57876-9076-4bb6-a07f-f6a315cf4640)
-![image](https://github.com/alwls5773/side_project_3/assets/66359601/4a43472d-ec9e-4f7c-8fee-eb0d55bc6e72)
-![image](https://github.com/alwls5773/side_project_3/assets/66359601/c9c60dc1-c342-4ca4-8489-be72bbea8284)
 
-GaussianNB
-SVC
-LogisticRegression
-tree
-RandomForestClassifier
+### - Machine Learning
+#### <model: accuracy, f1 score>
 
-0.9649122807017544
-0.956140350877193
-0.9736842105263158
-0.9385964912280702
-0.9649122807017544
+1. GaussianNB: 0.96, 0.96
 
-0.9647382344750767
-0.9562368871555263
-0.9736214250146138
-0.9387316420177368
-0.9647382344750767
+2. SVC: 0.95, 0.95
 
-batch_size = 5, epochs = 30, learning_rate=0.001
+#### 3. LogisticRegression: 0.97, 0.97
 
-model = tf.keras.Sequential([layers.Dense(8),
-                             layers.Dense(16),
-                             layers.Dense(8),
-                             layers.Dense(2, activation = "softmax")])
+4. tree: 0.93, 0.93
+
+5. RandomForestClassifier: 0.96, 0.96
+
+### - Deep Learning
+#### layer 층 구성하기 (batch_size = 5, epochs = 30, learning_rate=0.001)
+1. Dense(8), Dense(16), Dense(8), Dense(2, activation = "softmax")
                              
-![image](https://github.com/alwls5773/side_project_3/assets/66359601/b312a721-3405-4e42-8077-226330a2b61d)
-![image](https://github.com/alwls5773/side_project_3/assets/66359601/b84f876b-2dc3-4739-8d00-0fd25d21b1b8)
+![image](https://github.com/alwls5773/side_project_3/assets/66359601/fb9c306a-26cc-4b18-bb55-160e693cc7bd)
+![image](https://github.com/alwls5773/side_project_3/assets/66359601/66184404-3ac4-4e45-9972-1f2a9e08e1dc)
 
+2. Dense(8), Dense(16), Dense(8), Dense(1, activation = "sigmoid")
 
-model = tf.keras.Sequential([layers.Dense(8),
-                             layers.Dense(16),
-                             layers.Dense(8),
-                             layers.Dense(1, activation = "sigmoid")])
+![image](https://github.com/alwls5773/side_project_3/assets/66359601/bd9be394-de1f-4a23-a77d-4f9db7d777bc)
+![image](https://github.com/alwls5773/side_project_3/assets/66359601/4fe86c12-5ed2-4213-9af5-ae1cb0e93d77)
 
-![image](https://github.com/alwls5773/side_project_3/assets/66359601/3b019ea2-ad1d-4ccf-9975-c78e041a7c88)
-![image](https://github.com/alwls5773/side_project_3/assets/66359601/1ff82560-3661-4a38-9991-a2edfe11ef78)
+3. Dense(8), Dense(16), Dense(8), Dense(4), Dense(1, activation = "sigmoid")
 
+![image](https://github.com/alwls5773/side_project_3/assets/66359601/7655263d-3448-405f-bc6c-677f93f29d26)
+![image](https://github.com/alwls5773/side_project_3/assets/66359601/cb74a292-0c4c-461c-85ad-ae947bf82f67)
 
-model = tf.keras.Sequential([layers.Dense(8),
-                             layers.Dense(16),
-                             layers.Dense(8),
-                             layers.Dense(4),
-                             layers.Dense(1, activation = "sigmoid")])
+#### 4. Dense(8), Dense(16), Dense(4), Dense(1, activation = "sigmoid")
 
-![image](https://github.com/alwls5773/side_project_3/assets/66359601/55e5fd49-7e60-4bae-b6eb-adf109d6e6bc)
-![image](https://github.com/alwls5773/side_project_3/assets/66359601/e30711ed-afd9-40ca-a976-e00727e7adb1)
+![image](https://github.com/alwls5773/side_project_3/assets/66359601/86a415c8-425a-413b-a54b-8f7be87aaecb)
+![image](https://github.com/alwls5773/side_project_3/assets/66359601/fbacb920-900f-4791-8aa1-bb6aee0d9529)
 
+#### learning_rate 설정하기 (batch_size = 5, epochs = 30)
 
+1. learning_rate=0.0005
 
-model = tf.keras.Sequential([layers.Dense(8),
-                             layers.Dense(16),
-                             layers.Dense(4),
-                             layers.Dense(1, activation = "sigmoid")])
-![image](https://github.com/alwls5773/side_project_3/assets/66359601/171ed55c-830b-4761-b95e-ade2f4ac9e64)
-![image](https://github.com/alwls5773/side_project_3/assets/66359601/7546d780-a6a1-4bdd-9e5e-0da41e7972a4)
+![image](https://github.com/alwls5773/side_project_3/assets/66359601/b1fa4163-b1f3-43d5-bb14-a37254155425)
+![image](https://github.com/alwls5773/side_project_3/assets/66359601/57452e3d-47cb-49c2-8e6e-51df491b5771)
 
-batch_size = 5, epochs = 30, learning_rate=0.0005
+#### 2. learning_rate=0.0001
 
-model = tf.keras.Sequential([layers.Dense(8),
-                             layers.Dense(16),
-                             layers.Dense(4),
-                             layers.Dense(1, activation = "sigmoid")])
-![image](https://github.com/alwls5773/side_project_3/assets/66359601/170936bb-9233-4ff6-9ec1-3da44750353e)
-![image](https://github.com/alwls5773/side_project_3/assets/66359601/81622a20-84ac-4211-ac17-0b7373ecadcc)
+![image](https://github.com/alwls5773/side_project_3/assets/66359601/83cd30f1-5213-4d19-891d-2f76f0c611c9)
+![image](https://github.com/alwls5773/side_project_3/assets/66359601/1411afc6-2dbd-4229-8949-403b197e77c8)
 
-batch_size = 5, epochs = 30, learning_rate=0.0001
+3. learning_rate=0.00025
 
-model = tf.keras.Sequential([layers.Dense(8),
-                             layers.Dense(16),
-                             layers.Dense(4),
-                             layers.Dense(1, activation = "sigmoid")])
+![image](https://github.com/alwls5773/side_project_3/assets/66359601/9af81935-65ba-4853-96b5-556122be5f8f)
+![image](https://github.com/alwls5773/side_project_3/assets/66359601/12084db4-1a58-4fea-a5b4-afef0bd9a8b8)
 
-![image](https://github.com/alwls5773/side_project_3/assets/66359601/604f06df-e9cc-4a72-97d1-c70b2f4d6cfb)
-![image](https://github.com/alwls5773/side_project_3/assets/66359601/eb65a4d8-ce91-46bc-bcb9-e7be3ea8d7f7)
+#### epoch 설정하기 (batch_size = 5, learning_rate=0.0001)
+1. epochs = 50
+                             
+![image](https://github.com/alwls5773/side_project_3/assets/66359601/8f16077b-bc3c-4684-a526-4130e3a6b204)
+![image](https://github.com/alwls5773/side_project_3/assets/66359601/3b350d92-1af3-43e3-b3dc-73836b6a764a)
 
-batch_size = 5, epochs = 30, learning_rate=0.00025
+2. epochs = 75
 
-model = tf.keras.Sequential([layers.Dense(8),
-                             layers.Dense(16),
-                             layers.Dense(4),
-                             layers.Dense(1, activation = "sigmoid")])
+![image](https://github.com/alwls5773/side_project_3/assets/66359601/b1c38f67-fdcb-4011-b522-00ee1e499089)
+![image](https://github.com/alwls5773/side_project_3/assets/66359601/7067f27b-9eb2-4644-b19b-f2cd1a689acd)
 
-![image](https://github.com/alwls5773/side_project_3/assets/66359601/43b31d31-b909-4159-8084-e9d0eff2c119)
-![image](https://github.com/alwls5773/side_project_3/assets/66359601/81692667-81e9-4db9-b040-5bce2be240d7)
+3. epochs = 100
 
-batch_size = 5, epochs = 50, learning_rate=0.0001
-
-model = tf.keras.Sequential([layers.Dense(8),
-                             layers.Dense(16),
-                             layers.Dense(4),
-                             layers.Dense(1, activation = "sigmoid")])
-
-![image](https://github.com/alwls5773/side_project_3/assets/66359601/f190960c-a9c9-4a7b-b1b7-c7b84a25b67c)
-![image](https://github.com/alwls5773/side_project_3/assets/66359601/e0497469-14fb-4f57-b75c-9e9258f94760)
-
-batch_size = 5, epochs = 75, learning_rate=0.0001
-![image](https://github.com/alwls5773/side_project_3/assets/66359601/7cb5901b-b79c-4bc1-9d92-0dbadd54bfaa)
-![image](https://github.com/alwls5773/side_project_3/assets/66359601/3ca07d4b-5293-4bb0-a1e7-467789501c32)
-
-batch_size = 5, epochs = 100, learning_rate=0.0001
-![image](https://github.com/alwls5773/side_project_3/assets/66359601/c20b1389-91cc-4712-aca9-b024bcb2e5d6)
-![image](https://github.com/alwls5773/side_project_3/assets/66359601/374cb48d-76c4-4e4b-8db8-ab55341f6134)
-
+![image](https://github.com/alwls5773/side_project_3/assets/66359601/d42ea77e-e761-4f63-87dc-b784355d7dff)
+![image](https://github.com/alwls5773/side_project_3/assets/66359601/ad5d474a-8c3c-45df-a3f7-716f65ce217f)
 
