@@ -3,7 +3,7 @@
 #### 분석툴: sklearn, tensorflow
 #### 결론: 머신러닝 혹은 딥러닝 모델을 통해 종양이 양성인지 음성인지 판별할 수 있을 것임.
 
-해당 데이터는 종양이 악성 종양인지 양성 종양인지에 대한 정보, radius와 texture, perimeter, area 등에 대한 정보가 mean, se, worst로 분류되어 있음. 
+해당 데이터는 종양이 악성 종양인지 양성 종양인지에 대한 정보, radius와 texture, perimeter, area 등에 대한 정보가 있음. 
 ![image](https://github.com/alwls5773/side_project_3/assets/66359601/33a57876-9076-4bb6-a07f-f6a315cf4640)
 ##### 참고
 1) radius (mean of distances from center to points on the perimeter)
