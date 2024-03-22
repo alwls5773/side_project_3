@@ -1,4 +1,4 @@
-## cancer AI
+## breast cancer prediction
 #### 목적: 양성 종양과 악성 종양을 구분을 위한 인공지능
 #### 분석툴: sklearn, tensorflow
 #### 결론: 머신러닝 혹은 딥러닝 모델을 통해 종양이 양성인지 음성인지 판별할 수 있을 것임.
